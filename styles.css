@@ -28,7 +28,7 @@ header{
     display: flex;
     flex-direction: row ;
     width: 100%;
-    height: 150px;
+    height: 10vh;
     background-color: black;
     justify-content: space-between;
     position: fixed;
@@ -41,13 +41,13 @@ header{
 footer{
     background-color: black;
     position: relative;
-    font-size: 80%;
+    font-size: 1fr;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 .footer-body{
-    margin-bottom: 40px;
+    margin-bottom: 1vh;
 }
 .footer-body li > a{
     color: white;
@@ -84,7 +84,7 @@ a{
     color: white;
     height: 100px;
    
-    font-size: x-large;
+    font-size: 1vw;
    
 }
 a:hover{
