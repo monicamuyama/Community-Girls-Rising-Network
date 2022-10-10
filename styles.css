@@ -1,0 +1,197 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+section{
+    background-color: gray;
+    margin-top: 150px;
+    flex: 1 0 auto;
+}
+
+.brief{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 2fr;
+    padding: 10px;
+    column-gap: 1%;
+    text-align: center;
+}
+header{
+    z-index: 5;
+    display: flex;
+    flex-direction: row ;
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    margin: 0px;
+    
+}
+footer{
+    background-color: black;
+    position: relative;
+    font-size: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.footer-body{
+    margin-bottom: 40px;
+}
+.footer-body li > a{
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+#logo{
+    width: 150px;
+    
+}
+.welcomePage{
+    position: relative;
+}   
+#name{
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#welcome{
+    width: 100%;
+    height: auto;
+}
+.nav-bar a{
+    padding: 10px;
+    line-height: 100px;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+    height: 100px;
+   
+    font-size: x-large;
+   
+}
+a:hover{
+    background-color: red;
+    font-weight: 700;
+}
+footer a{
+    line-height: 50px;
+}
+h1{
+    font-size: 5rem;
+    font-weight: 900;
+}
+h2{
+    font-size: 3rem;
+    color: rgb(185, 57, 57);
+    text-align: center;
+}
+
+p{
+    font-size: 2rem;
+    color: white;
+    font-weight: 500;
+}
+.aboutPage{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    
+}
+.moreAbout{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.objectives{
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+}
+.photo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: auto;
+    width: 90%;
+    margin-bottom: 20px;
+    column-gap: 1%;
+}
+.photo img{
+   width: 100%;
+   height: 400px;
+    
+}
+.form-container{
+    margin: 20px;
+    padding: 15px;
+    color: white;
+    margin: 0 auto;
+    width: 60%;
+}
+.input-cnt{
+    display: flex;
+    margin-bottom: 15px;
+}
+.input-cnt:last-child{
+    margin-bottom: 0px;
+}
+.input-cnt > i {
+    min-width: 40px;
+    padding: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.input-cnt > input[type = "text"], input[type = "email"], .input-cnt > textarea{
+   outline: none;
+   border: none;
+   padding: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 100%;
+}
+.textarea-icon{
+    padding: 60px 10px;
+}
+.input-cnt > input[type = "submit"]{
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    width: 20%;
+    margin: 0 auto;
+    font-size: 105%;
+    padding: 8px;
+}
+.image-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    width: 80%;
+    box-shadow: 0 15px 30px
+    rgba(0,0,0,0,30), 0 11px 8px rgba(0,0,0,0,22);
+    margin-top: 20px;
+    column-gap: 1%;
+}
+.image-container img{
+    width: 100%;
+    height: 500px;
+}
+.image-description{
+    padding: 0 15px 15px 15px;
+    text-align: center;
+}
