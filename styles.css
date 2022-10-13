@@ -12,7 +12,7 @@ body{
 }
 section{
     background-color: gray;
-    margin-top: 150px;
+    margin-top: 20vh;
     flex: 1 0 auto;
 }
 
@@ -28,7 +28,7 @@ header{
     display: flex;
     flex-direction: row ;
     width: 100%;
-    height: 10vh;
+    height: 20vh;
     background-color: black;
     justify-content: space-between;
     position: fixed;
@@ -41,22 +41,28 @@ header{
 footer{
     background-color: black;
     position: relative;
-    font-size: 1fr;
+    font-size: 1vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    height: 20vh;
 }
 .footer-body{
-    margin-bottom: 1vh;
+    padding-bottom: 1vh ;
 }
-.footer-body li > a{
+
+li{
+    list-style: none;
+    text-decoration: none;
     color: white;
-    margin: 0px;
+    margin: 0.5vh; ;
     padding: 0px;
     text-align: center;
+    font-size: 1.5vw;
 }
 #logo{
-    width: 150px;
+    height: 100%;
+    width: auto;
     
 }
 .welcomePage{
@@ -65,7 +71,7 @@ footer{
 #name{
     position: absolute;
     width: 100%;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -82,17 +88,12 @@ footer{
 a{
     text-decoration: none;
     color: white;
-    height: 100px;
-   
-    font-size: 1vw;
-   
+    height: 1vh;
+    font-size: 1.5vw;  
 }
 a:hover{
     background-color: red;
-    font-weight: 700;
-}
-footer a{
-    line-height: 50px;
+    font-weight: 700;      
 }
 h1{
     font-size: 6vw;
@@ -112,11 +113,13 @@ p{
 .aboutPage{
     display: grid;
     grid-template-columns: 1fr 3fr;
+    align-items: center;
     
 }
 .moreAbout{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5vw;
 }
 .objectives{
     text-align: center;
@@ -127,54 +130,57 @@ p{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: auto;
-    width: 96%;
+    width: 100%;
     margin-bottom: 20px;
     column-gap: 1%;
 }
-img{
+ img{
    width: 100%;
    height: auto;
-    
 }
-.form-container{
-    margin: 20px;
-    padding: 15px;
+#wrapper{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.form{
+	width: 65vw;
+	height: 75vh;
+	border-radius: 4vw;
+}
+.form h2{
+	text-align: center;
+}
+.form input,textarea{
+	border: none;
+	border-radius: 5px;
+	margin-left: 5%;
+	width: 80%;
+	padding: 5px 5%;
+	margin-top: 3vh;
+	height: 7vh;
+	color: white;
+    font-size: 2vw;
+}
+.form textarea{
+    height: 15vh;
+}
+.form button{
+	border: none;
+	background: transparent;
+	padding: 1vw 2vw;
+	box-shadow:  1px 1px 6px #55bdb8;
+	border-radius: 5px;
+	color:red;
+    font-size: 1.5vw;
+}
+.form button:hover{
+    background-color: red;
     color: white;
-    margin: 0 auto;
-    width: 60%;
-}
-.input-cnt{
-    display: flex;
-    margin-bottom: 15px;
-}
-.input-cnt:last-child{
-    margin-bottom: 0px;
-}
-.input-cnt > i {
-    min-width: 40px;
-    padding: 10px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-.input-cnt > input[type = "text"], input[type = "email"], .input-cnt > textarea{
-   outline: none;
-   border: none;
-   padding: 10px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    width: 100%;
-}
-.textarea-icon{
-    padding: 60px 10px;
-}
-.input-cnt > input[type = "submit"]{
-    border: none;
-    border-radius: 20px;
-    outline: none;
-    width: 20%;
-    margin: 0 auto;
-    font-size: 105%;
-    padding: 8px;
 }
 .image-container{
     display: grid;
