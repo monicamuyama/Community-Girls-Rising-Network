@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Girls Rising Network</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div><img src="Images/logo.png" alt="CRINGN logo" id="logo" srcset=""></div>
+        <div class="nav-bar">
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="photos.html">Gallery</a>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <div class="aboutPage">
+            <div>
+                <img src="Images/logo.png" alt="" srcset="">
+            </div>
+            <div>
+                <h1>Community Rising Girls Network (CGRIN)</h1>
+                <h2>We will be so glad to hear from you</h2>
+            </div>
+        </div>
+            <div id="wrapper">
+                <form class="form" method="POST">
+                    <h2>Contact US</h2>
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="email" name="email" placeholder="Email Address">
+                    <input type="number" name="phone" placeholder="Phone">
+                    <input type="text" name="subject" placeholder="Subject">
+                    <textarea name="body" placeholder="Type your message here..."></textarea>
+                    <button type="submit" name="submit">Submit</button>
+                </form>
+            </div>
+<?php
+if(isset($_POST['submit'])){
+    $to = "community.rgn@gmail.com";
+
+
+
+    $name = $_POST['name'];
+    $email= $_POST['email'];
+    $phone= $_POST['phone'];
+    $subject= $_POST['subject'];
+    $body= $_POST['body'];
+    $headers = 'From: '.$email . "\r\n";
+
+
+    $body = "name : ".$name. "\r\n" .
+    		"Phone : ".$phone. "\r\n" .
+    		"Message : " . $body;
+    if(mail($to, $subject, $body , $headers)){
+        echo "Mail Sent!";
+    }else{
+         echo "Failed To Send Mail";
+    }
+}
+
+?>
+        
+    </section>
+    <footer>
+        <div>
+            <img src="Images/logo.png" alt="CRINGN logo" id="logo" srcset=""> 
+        </div>
+        <div>
+            <ul>
+                <li>For more information:</li>
+                <li>Tel: </li>
+                <li> 0784955014</li>
+                <li><a href="mail to;community.rgn@gmail.com">Email us</a></li>
+                
+            </ul>
+            
+        </div>
+        <div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="photos.html">Gallery</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
