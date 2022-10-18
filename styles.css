@@ -138,15 +138,15 @@ p{
 	justify-content: center;
 	align-items: center;
 }
-.form{
+form{
 	width: 65vw;
 	height: 75vh;
 	border-radius: 4vw;
 }
-.form h2{
+form h2{
 	text-align: center;
 }
-.form input,textarea{
+form input, textarea{
 	border: none;
 	border-radius: 5px;
 	margin-left: 5%;
@@ -157,10 +157,10 @@ p{
 	color: white;
     font-size: 2vw;
 }
-.form textarea{
+form textarea{
     height: 15vh;
 }
-.form button{
+form button{
 	border: none;
 	background: transparent;
 	padding: 1vw 2vw;
@@ -169,7 +169,7 @@ p{
 	color:red;
     font-size: 1.5vw;
 }
-.form button:hover{
+form button:hover{
     background-color: red;
     color: white;
 }
