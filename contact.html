@@ -30,36 +30,42 @@
             </div>
         </div>
             <div id="wrapper">
-                <form onsubmit="sendEmail(); reset(); return false;">
+                <form class="form" method="POST">
                     <h2>Contact US</h2>
-                    <input type="text" name="name" id = "Username"placeholder="Name">
-                    <input type="email" name="email" id = "emailAddress" placeholder="Email Address">
-                    <input type="number" name="phone" id = "phoneNo" placeholder="Phone">
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="email" name="email" placeholder="Email Address">
+                    <input type="number" name="phone" placeholder="Phone">
                     <input type="text" name="subject" placeholder="Subject">
-                    <textarea name="body" id="message" placeholder="Type your message here..."></textarea>
+                    <textarea name="body" placeholder="Type your message here..."></textarea>
                     <button type="submit" name="submit">Submit</button>
                 </form>
             </div>
-            <script src="https://smtpjs.com/v3/smtp.js"></script>
-            <script>
-                function sendEmail(){
-                    Email.send({
-                    Host: "smtp.elasticemail.com",
-                    UserName: "muyamamonica@gmail.com",
-                    Password:"Amaaci23#",
-                    To:"moniqueartandboutique@gmail.com",
-                    From: document.getElementById("emailAddress").value,
-                    Subject: "New contact form inquiry",
-                    Body: "Name:" + document.getElementById("Username").value
-                    + "<br> Email:" + document.getElementById("emailAddress").value
-                     + "<br> Telephone No:" + document.getElementById("phoneNo").value
-                     +"<br>Message:" + document.getElementById("message").value
-                    }).then(
-                        alert("Message sucessfully sent")
-                    );
-                   
-                }
-            </script>
+<?php
+if(isset($_POST['submit'])){
+    $to = "community.rgn@gmail.com";
+
+
+
+    $name = $_POST['name'];
+    $email= $_POST['email'];
+    $phone= $_POST['phone'];
+    $subject= $_POST['subject'];
+    $body= $_POST['body'];
+    $headers = 'From: '.$email . "\r\n";
+
+
+    $body = "name : ".$name. "\r\n" .
+    		"Phone : ".$phone. "\r\n" .
+    		"Message : " . $body;
+    if(mail($to, $subject, $body , $headers)){
+        echo "Mail Sent!";
+    }else{
+         echo "Failed To Send Mail";
+    }
+}
+
+?>
+        
     </section>
     <footer>
         <div>
